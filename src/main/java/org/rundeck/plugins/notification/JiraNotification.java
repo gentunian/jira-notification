@@ -105,7 +105,7 @@ public class JiraNotification implements NotificationPlugin {
         Map context = (Map) executionData.get("context");
 
         Map options = (Map) context.get("option");
-        if (null != options && options.size()>0) {
+        if (options != null && options.size()>0) {
             sb.append("h6. User Options\n");
             for (Object o : options.entrySet()) {
                 Map.Entry entry = (Map.Entry) o;
@@ -128,7 +128,7 @@ public class JiraNotification implements NotificationPlugin {
     }
 
     private boolean isBlank(String string) {
-        return null == string || "".equals(string);
+        return string == null || "".equals(string);
     }
 
 
