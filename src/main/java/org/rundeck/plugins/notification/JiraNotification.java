@@ -41,13 +41,13 @@ public class JiraNotification implements NotificationPlugin {
 
     @Override
     public boolean postNotification(String trigger, Map executionData, Map config) {
-        if (null == login) {
+        if (login == null) {
             throw new IllegalStateException("login is required");
         }
-        if (null == password) {
+        if (password == null) {
             throw new IllegalStateException("password is required");
         }
-        if (null == serverURL) {
+        if (serverURL == null) {
             throw new IllegalStateException("server URL is required");
         }
         /**
