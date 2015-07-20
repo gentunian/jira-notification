@@ -50,7 +50,7 @@ public class JiraNotification implements NotificationPlugin {
         if (serverURL == null) {
             throw new IllegalStateException("server URL is required");
         }
-        if (issueKey == null || issueKey == '') {
+        if (issueKey == null || issueKey == "") {
             throw new IllegalStateException("issue key is required");
         }
 
